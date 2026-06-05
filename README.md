@@ -23,10 +23,7 @@
 2. **自適應視窗動態佈局**：
    捨棄了 Visual Studio 預設生成的 Designer 靜態程式碼，全面使用 C# 程式碼動態宣告、配置與加入控制項。並實作 `LayoutMainPanel` 事件處理函式，動態計算控制項在視窗縮放時的相對座標與寬高，達到完美的響應式視窗效果。
 
-3. **強大的 C# 10 與 4.7.2 混合架構**：
-   專案在傳統 `.NET Framework 4.7.2` 的基礎上，透過在 `.csproj` 配置 `<LangVersion>10.0</LangVersion>` 引入了 C# 10.0 編譯特性。運用了「檔案範圍命名空間 (File-scoped namespaces)」、「全域引用 (Global Usings)」、「可為 Null 的參考型別 (Nullable reference types)」等現代語法，讓傳統架構的程式碼更加乾淨俐落。
-
-4. **單字庫檔案序列化 (TSV 解析)**：
+3. **單字庫檔案序列化 (TSV 解析)**：
    實作了 `WordItem` 與 `WordCollection` 來負責單字資料的載入與寫入。以 Tab (\t) 分隔的檔案結構 (TSV) 進行資料持久化，並在寫回檔案前對多行中文釋義的換行符號 (`\r\n`) 進行編碼轉換，確保檔案讀寫的一致性與安全性。
 
 ## 如何執行
